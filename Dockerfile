@@ -20,9 +20,6 @@ RUN \
 		musl-dev \
 	&& git clone https://github.com/HFO4/gameboy.live.git \
 	&& cd gameboy.live \
-	# Fix for Fix #9 from Maintainer
-	# See here: https://github.com/HFO4/gameboy.live/issues/9#issuecomment-491320833
-	&& git checkout ec8034329501bd484dc02254c7ece5f5680902d7 \
 	&& go build -o gbdotlive main.go \
 	&& mv gbdotlive /usr/bin/ \
 	# Cleanup
